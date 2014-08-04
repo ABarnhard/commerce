@@ -1,13 +1,15 @@
 {
   "name": "commerce",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "E-Commerce Node Application",
   "main": "app/index.js",
   "directories": {
     "test": "test"
   },
+  "bin": {"coveralls" : "./node_modules/coveralls/bin/coveralls.js"},
   "scripts": {
-    "test": "mocha test --recursive -R spec"
+    "test": "mocha test --recursive -R spec",
+    "coveralls": "./node_modules/mocha/bin/mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,11 @@
     "url": "https://github.com/abarnhard/commerce/issues"
   },
   "homepage": "https://github.com/abarnhard/commerce",
+  "config": {
+    "blanket": {
+      "pattern": "/app/"
+    }
+  },
   "dependencies": {
     "body-parser": "^1.5.2",
     "express": "^4.7.2",
