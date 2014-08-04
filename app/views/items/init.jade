@@ -5,23 +5,34 @@ html
     title eCommerce
     link(rel='stylesheet', href='/css/style.css')
   body
-    h1 eCommerce
-    nav
-      ul
-        li: a(href='/') Home
-        li: a(href='/about') About
-        li: a(href='/faq') Faq
-        li: a(href='/items/new') Add Item
-        li: a(href='/items') View Items
-    form(method='post', action='/items')
-      input(name='name', type='text', placeholder='iPad', autofocus=true)
-      input(name='dimensions[l]', type='number', placeholder='length')
-      input(name='dimensions[w]', type='number', placeholder='width')
-      input(name='dimensions[h]', type='number', placeholder='height')
-      input(name='weight', type='number', placeholder='weight')
-      input(name='color', type='color', placeholder='color')
-      input(name='quantity', type='number', placeholder='quantity')
-      input(name='msrp', type='number', placeholder='msrp')
-      input(name='percentOff', type='number', placeholder='percentOff')
-      button Add Item to Database
+    .container
+      h1 eCommerce
+      nav
+        ul
+          li: a(href='/') Home
+          li: a(href='/about') About
+          li: a(href='/faq') Faq
+          li: a(href='/items/new') Add Item
+          li: a(href='/items') View Items
+      #newItem
+        form(method='post', action='/items')
+          input(name='name', type='text', placeholder='iPad', autofocus=true)
+          br
+          input(name='dimensions[l]', type='number', placeholder='length')
+          br
+          input(name='dimensions[w]', type='number', placeholder='width')
+          br
+          input(name='dimensions[h]', type='number', placeholder='height')
+          br
+          input(name='weight', type='number', placeholder='weight')
+          br
+          input(name='color', type='color', placeholder='color')
+          br
+          input(name='quantity', type='number', placeholder='quantity')
+          br
+          input(name='msrp', type='number', placeholder='msrp')
+          br
+          input(name='percentOff', type='number', placeholder='percentOff')
+          br
+          button Add Item to Database
 
