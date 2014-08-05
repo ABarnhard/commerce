@@ -15,7 +15,7 @@ html
           li: a(href='/items/new') Add Item
           li: a(href='/items') View Items
       #item
-        form(method='post', action='/items/#{item._id}')
+        form(method='post', action='/items/#{item._id}/delete')
           table
             thead
               tr
