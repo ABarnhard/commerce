@@ -6,7 +6,9 @@
   "directories": {
     "test": "test"
   },
-  "bin": {"coveralls" : "./node_modules/coveralls/bin/coveralls.js"},
+  "bin": {
+    "coveralls": "./node_modules/coveralls/bin/coveralls.js"
+  },
   "scripts": {
     "test": "mocha test --recursive -R spec",
     "coveralls": "./node_modules/mocha/bin/mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
@@ -29,6 +31,7 @@
   "dependencies": {
     "body-parser": "^1.5.2",
     "express": "^4.7.2",
+    "express-method-override": "0.0.3",
     "jade": "^1.5.0",
     "lodash": "^2.4.1",
     "mongodb": "^1.4.8",
