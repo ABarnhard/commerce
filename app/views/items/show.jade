@@ -24,19 +24,17 @@ html
                 th Width
                 th Height
                 th Weight
-                th Color
                 th Qty
                 th MSRP
                 th % Off
                 th Cost
             tbody
-              tr
+              tr(style='background-color:#{item.color};')
                 td= item.name
                 td= item.dimensions.l
                 td= item.dimensions.w
                 td= item.dimensions.h
                 td= item.weight
-                td= item.color
                 td= item.quantity
                 td= item.msrp
                 td= item.percentOff
